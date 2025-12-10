@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Zadanie 49 - kod</title>
+    </head>
+    <body>
+        <center>
+        <h1>Zadanie 49 kod: </h1>
+        <textarea readonly rows="33" cols="81"><!DOCTYPE html>   
+<html lang="pl">
+<head>    
+    <title>Sprawdzenie danych Ponomarenko</title>    
+    <meta charset="utf-8">   
+</head>  
+<body> 
+<div style="color:red;font-size:50px;"> 
+<script language="JavaScript"> 
+var silnia_pon;
+
+do { 
+    var liczba1 = prompt("n="," "); 
+    var n_pon = parseInt(liczba1); 
+} while (n_pon < 0);
+
+if (n_pon === 0) {
+    silnia_pon = 1;
+} else {
+    silnia_pon = 1;
+    for (var i_pon = 1; i_pon <= n_pon; i_pon++){
+        silnia_pon *= i_pon;
+    }
+}
+
+document.write("n = " + n_pon + "<br>" + n_pon + "! = " + silnia_pon);
+</script> 
+</div> 
+</body> 
+</html></textarea>
+        </center>
+    </body>
+</html>

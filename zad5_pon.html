@@ -1,0 +1,45 @@
+<head>
+ <title>Michał Ponomarenko 2P</title>
+ <script language="JavaScript">
+ function WinOpen_1()
+ {
+window.open("grafika1.html","grafika1","toolbar=no,directories=no,menubar=no,height=380,width=240,top=150,left=0");
+ }
+  function WinOpen_2()
+ {
+window.open("grafika2.html","grafika2","toolbar=no,directories=no,menubar=no,height=380,width=240,top=150,left=260");
+ }
+  function WinOpen_3()
+ {
+window.open("grafika3.html","grafika3","toolbar=no,directories=no,menubar=no,height=380,width=240,top=150,left=520");
+ }
+  function WinOpen_4()
+ {
+window.open("grafika4.html","grafika4","toolbar=no,directories=no,menubar=no,height=380,width=240,top=150,left=780");
+ }
+ function okno_zamknij()
+ {
+   window.close();
+ }
+ </script>
+ <style>
+ body {
+   text-align: center;
+ }
+ form {
+   display: inline-block;
+   margin-top: 30px;
+ }
+ </style>
+ </head>
+<body>
+      <p style="font-size:1cm; color:red;">wykonal: Michał Ponomarenko moj numer w dzienniku 21, czyli mam uklad [(21) mod 4=0] uklad 4</p>
+ <form>
+     <input type="button" name="grafika1" value="grafika1" onclick="WinOpen_1(' ')">
+     <input type="button" name="grafika2" value="grafika2" onclick="WinOpen_2(' ')">
+     <input type="button" name="grafika3" value="grafika3" onclick="WinOpen_3(' ')">
+    <input type="button" name="grafika4" value="grafika4" onclick="WinOpen_4(' ')"><br>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+ </form>
+</body>
+</html>

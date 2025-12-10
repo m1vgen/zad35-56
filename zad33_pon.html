@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Logowanie</title>
+</head>
+<body>
+
+  <h2>Logowanie</h2>
+
+  <form id="loginForm">
+    <input type="email" id="email" placeholder="E-mail" required>
+    <input type="password" id="haslo" placeholder="Hasło" required>
+    <button type="submit">Zaloguj</button>
+  </form>
+
+  <div id="wynik"></div>
+
+  <script>
+    function User(email, haslo, avatarUrl) {
+      this.email = email;
+      this.haslo = haslo;
+      this.avatarUrl = avatarUrl;
+    }
+
+    const userList = {
+      users: [],
+
+      addUser(user) {
+        this.users.push(user);
+      },
+
+      getUser(email, haslo) {
+        return this.users.find(u => u.email === email && u.haslo === haslo);
+      }
+    };
+
+    // Dodanie użytkowników
+    userList.addUser(new User("gwiazda@gmail.com", "8888", "https://example.com/avatar1.png"));
+    userList.addUser(new User("grzes@gmai.com", "maslo", "https://example.com/avatar2.png"));
+
+    const form = document.getElementById("loginForm");
+    const wynik = document.getElementById("wynik");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const email = document.getElementById("email").value;
+      const haslo = document.getElementById("haslo").value;
+
+      const user = userList.getUser(email, haslo);
+
+      if (user) {
+        wynik.textContent = `Zalogowano. Avatar: ${user.avatarUrl}`;
+      } else {
+        wynik.textContent = "Błąd";
+      }
+    });
+  </script>
+</body>
+</html>

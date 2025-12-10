@@ -1,0 +1,45 @@
+<textarea name="nazwa" cols="90" rows="40" readonly>
+<html>
+<head>
+<script type="text/javascript">
+
+var pociag = {
+    nazwa: 'Express InterCity',
+    ile_wagonow: 8,
+    predkosc: 160,
+    stacja_docelowa: 'Warszawa Centralna',
+
+    pokaz: function() {
+        document.write('Pociąg: ' + this.nazwa + '<br>');
+        document.write('Liczba wagonów: ' + this.ile_wagonow + '<br>');
+        document.write('Prędkość: ' + this.predkosc + ' km/h<br>');
+        document.write('Stacja docelowa: ' + this.stacja_docelowa + '<br><br>');
+    }
+}
+
+pociag.pokaz();
+pociag.dlugosc = 250;
+
+pociag_pokaz_ponomarenko = function() {
+    document.write('Nowe pole - długość pociągu: ' + pociag.dlugosc + ' m<br><br>');
+}
+
+pociag_pokaz_ponomarenko();
+
+pociag_wyswietl_ponomarenko = function() {
+    document.write('Nazwa obiektu: pociag<br>');
+    document.write('Pola: nazwa, ile_wagonow, predkosc, stacja_docelowa, dlugosc<br>');
+    document.write('Metody: pokaz(), pociag_pokaz_ponomarenko(), pociag_wyswietl_ponomarenko()<br>');
+}
+
+pociag_wyswietl_ponomarenko();
+
+</script>
+</head>
+<body>
+<br>
+Programowanie obiektowe – Michał Ponomarenko<br>
+Obiekt: Pociąg<br>
+</body>
+</html>
+<textarea name="nazwa" cols="90" rows="40" readonly>

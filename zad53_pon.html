@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prostokąt</title>
+    <style>
+        pre {
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+
+    <p>Prostokąt z gwiazdek o wymiarach: a = 6, b = 23</p>
+
+    <pre id="prostokat"></pre>
+
+    <script>
+        function rysujProstokat(a_pon, b_pon) {
+            let output = '';
+
+            // Górna krawędź
+            for (let i_pon = 0; i_pon < b_pon; i_pon++) {
+                output += '*';
+            }
+            output += '\n';
+
+            // Środek prostokąta
+            for (let i_pon = 0; i_pon < a_pon - 2; i_pon++) {
+                output += '*'; // lewa krawędź
+                for (let j_pon = 0; j_pon < b_pon - 2; j_pon++) {
+                    output += ' ';
+                }
+                output += '*\n'; // prawa krawędź
+            }
+
+            // Dolna krawędź
+            for (let i_pon = 0; i_pon < b_pon; i_pon++) {
+                output += '*';
+            }
+
+            document.getElementById("prostokat").textContent = output;
+        }
+
+        rysujProstokat(6, 23);
+    </script>
+</body>
+</html>

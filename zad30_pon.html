@@ -1,0 +1,30 @@
+<html>
+<head>
+<script type="text/javascript">
+var Pociag = {
+  ile_wagonow: 8,
+  relacja: 'Warszawa - Gdańsk',
+  predkosc_max: 160,
+  Pociag_wyswietl_ponomarenko: function() {
+    document.write(
+      "Pociąg relacji: " + this.relacja + "<br>" +
+      "Liczba wagonów: " + this.ile_wagonow + "<br>" +
+      "Prędkość maksymalna: " + this.predkosc_max + " km/h"
+    );
+  }
+}
+
+Pociag.Pociag_wyswietl_ponomarenko();
+</script>
+</head>
+<body>
+<br>
+Programowanie obiektowe.<br>
+Obiekt to pociąg<br>
+Pola:<br>
+ile_wagonow<br>
+relacja<br>
+predkosc_max<br>
+metoda: Pociag_wyswietl_ponomarenko<br>
+</body>
+</html>

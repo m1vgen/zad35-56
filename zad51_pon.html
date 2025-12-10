@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Zadanie 51</title>
+</head>
+<body>
+    <script language="JavaScript">
+        var ile_razy_pon = prompt("Ile razy powtórzyć napis?");
+        ile_razy_pon = parseInt(ile_razy_pon);
+        
+        var inicjaly_pon = prompt("Podaj Twoje inicjały:");
+        
+        for (var i_pon = 1; i_pon <= ile_razy_pon; i_pon++) {
+            for (var k_pon = 1; k_pon <= i_pon; k_pon++) {
+                document.write("&nbsp;");
+            }
+            document.write(i_pon + "_" + inicjaly_pon + "_" + i_pon + "<br>");
+        }
+    </script>
+</body>
+</html>

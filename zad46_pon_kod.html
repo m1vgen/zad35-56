@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Zadanie 46 - kod</title>
+    </head>
+    <body>
+        <center>
+        <h1>Zadanie 46 kod: </h1>
+        <textarea readonly rows="33" cols="81"><!DOCTYPE html>
+<html>
+<head>
+    <title>Sprawdzenie danych Gałęziowski</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<div style="color:red;font-size:50px;">
+    <script language="JavaScript">
+        do {
+            var liczba1_pon = prompt("wysokość=","");
+            var h_pon = parseFloat(liczba1_pon);
+        }
+        while (h_pon<= 0);
+        
+        do {
+            var liczba2_pon = prompt("podstawę=","");
+            var a_pon = parseFloat(liczba2_pon);
+        }
+        while(!(a_pon > 0));
+        
+        var Pole_pon = a_pon * h_pon / 2;
+        document.write("Pole=" + Pole_pon.toFixed(2) + " cm^2" + "<br>");
+    </script>
+</div>
+</body>
+</html></textarea>
+        </center>
+    </body>
+</html>

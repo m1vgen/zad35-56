@@ -1,0 +1,46 @@
+<html>
+<head>
+ <script language="JavaScript">
+function pole_ponomarenko(a_pon,b_pon)
+{
+ a=parseFloat(a_pon);
+ b=parseFloat(b_pon);
+ pole=a*b;
+ document.getElementsByName('pole')[0].value=pole.toFixed(2); 
+ alert("pole="+pole.toFixed(2)+" cm^2"); 
+ pokaz1.innerHTML="pole="+pole.toFixed(2)+" cm^2"+"<br>"; 
+}
+function obwod_ponomarenko(a_pon,b_pon)
+{
+ a=parseFloat(a_pon);
+ b=parseFloat(b_pon)
+ obwod=2*a+2*b;
+ document.getElementsByName('obwod')[0].value=obwod.toFixed(2);
+ alert("obwód="+obwod.toFixed(2)+" cm");
+ pokaz2.innerHTML="obwód="+obwod.toFixed(2)+"cm";
+}
+ </script>
+</head>
+<body>
+Obliczanie pola i obwodu prostokąta
+<br> <br>
+<form name="formularz" action="..." onsubmit="pole_ponomarenko(this.a_pon.value,this.b_pon.value);
+obwod_ponomarenko(this.a_pon.value,this.b_pon.value);return false">
+ Podaj a=
+ <input size="6" name="a_pon">
+ Podaj b=
+ <input size="6" name="b_pon">
+ <br> <br>
+ <input TYPE="submit" Value="oblicz" >
+ <br> <br>
+ pole=
+ <input size="6" name="pole">
+ obwód=
+ <input size="6" name="obwod">
+</form>
+<table>
+ <tr id="pokaz1"></tr>
+ <tr id="pokaz2"></tr>
+</table>
+</body>
+</html>

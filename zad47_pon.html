@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sprawdzenie danych Ponomarenko</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<div style="color:red;font-size:50px;">
+    <script language="JavaScript">
+        do {
+            var liczba1_pon = prompt("a="," ");
+            var a_pon = parseFloat(liczba1_pon);
+            var liczba2_pon = prompt("b="," ");
+            var b_pon = parseFloat(liczba2_pon);
+            var liczba3_pon = prompt("c="," ");
+            var c_pon = parseFloat(liczba3_pon);
+        }
+        while (!((a_pon < b_pon + c_pon) && (b_pon < a_pon + c_pon) && (c_pon < a_pon + b_pon) && (a_pon > 0) && (b_pon > 0) && (c_pon > 0)));
+        
+        document.write("Boki: " + a_pon + " " + b_pon + " " + c_pon + "<br>");
+    </script>
+</div>
+</body>
+</html>

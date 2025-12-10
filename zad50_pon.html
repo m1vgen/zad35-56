@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Przykład użycia pętli</title>
+</head>
+<body>
+    <script language="JavaScript">
+        document.write("<div style='color:red;font-size:2cm;'>Ponomarenko</div>");
+        document.write("<div style='color:blue;font-size:5mm;'>Wyprowadzanie liczb od 1 do 10 przesuniętych o jedną spację w prawo. Demonstarcja pętli zagnieżdżonych (czyli pętla w pętli).</div><br>");
+        
+        for (var i_pon = 1; i_pon <= 10; i_pon++) {
+            for (var k_pon = 1; k_pon <= i_pon; k_pon++) {
+                document.write("&nbsp;");
+            }
+            document.write(i_pon + "<br>");
+        }
+    </script>
+</body>
+</html>

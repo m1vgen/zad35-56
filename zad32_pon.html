@@ -1,0 +1,54 @@
+<html>
+<head>
+<script type="text/javascript">
+
+function Pociag(nazwa_p, ile_wagonow_p, predkosc_p, stacja_docelowa_p)
+{
+    this.nazwa = nazwa_p;
+    this.ile_wagonow = ile_wagonow_p;
+    this.predkosc = predkosc_p;
+    this.stacja_docelowa = stacja_docelowa_p;
+
+    alert(this.nazwa + ' ' + this.ile_wagonow + ' ' + this.predkosc + ' ' + this.stacja_docelowa);
+}
+
+Pociag.prototype.wypisz = function() {
+    document.write('Pociąg: ' + this.nazwa + '<br>');
+    document.write('Liczba wagonów: ' + this.ile_wagonow + '<br>');
+    document.write('Prędkość: ' + this.predkosc + ' km/h<br>');
+    document.write('Stacja docelowa: ' + this.stacja_docelowa + '<br><br>');
+};
+
+var pociag1 = new Pociag('InterCity', 8, 160, 'Warszawa Centralna');
+var pociag2 = new Pociag('Pendolino', 7, 200, 'Kraków Główny');
+var pociag3 = new Pociag('TLK', 10, 120, 'Gdańsk Główny');
+
+pociag1.wypisz();
+pociag2.wypisz();
+pociag3.wypisz();
+
+document.write('Dostęp do właściwości<br>');
+document.write('Pociąg pierwszy: ' + pociag1.nazwa + ', ' + pociag1.predkosc + ' km/h<br>');
+document.write('Pociąg drugi: ' + pociag2.nazwa + ', ' + pociag2.predkosc + ' km/h<br>');
+document.write('Pociąg trzeci: ' + pociag3.nazwa + ', ' + pociag3.predkosc + ' km/h<br><br>');
+
+pociag1.dlugosc = 250;
+pociag2.dlugosc = 300;
+pociag3.dlugosc = 220;
+
+pociag_pokaz_ponomarenko = function(p) {
+    alert('Długość pociągu ' + p.nazwa + ': ' + p.dlugosc + ' metrów');
+};
+
+pociag_pokaz_ponomarenko(pociag1);
+pociag_pokaz_ponomarenko(pociag2);
+pociag_pokaz_ponomarenko(pociag3);
+
+</script>
+</head>
+<body>
+<br>
+Programowanie obiektowe – Michał Ponomarenko<br>
+Obiekt: Pociąg<br>
+</body>
+</html>
